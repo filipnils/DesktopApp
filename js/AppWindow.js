@@ -8,4 +8,12 @@ function AppWindow(cssClass) {
 
 	//Baren längst nere i fönstret
 	$("<div></div>").appendTo(".appwindow").attr("class", "appwindowbottom");
+
+	//Close button
+	$(".appwindowtop").append('<img src="imgs/close.png" alt="Close" id="close">');
+
+	//Ta bort fönstret vid stängningsklick
+	$("#close").on("click", function() {
+		$(".appwindow").toggleClass(".hide");
+	});
 }
